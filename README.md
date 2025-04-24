@@ -17,7 +17,6 @@ Projeto de uma aplicação web para gerenciamento de tarefas, seguindo a arquite
 - **Maven**
 - **H2 Database** (ambiente de testes)
 - **MariaDB** (persistência relacional)
-- **MongoDB** (persistência NoSQL)
 - **Postman** (para testes de API)
 
 ---
@@ -35,11 +34,9 @@ A aplicação está dividida em camadas conforme o padrão MVC:
 
 ## 🗃️ Banco de Dados
 
-### ✅ Suporte a múltiplos bancos:
+### ✅ Suporte ao banco:
 
 - **MariaDB** para ambiente de produção com persistência relacional.
-- **MongoDB** para estrutura NoSQL.
-- **H2** para ambiente de desenvolvimento local e testes rápidos.
 
 A seleção e configuração dos bancos são feitas via `application.properties`.
 
@@ -49,7 +46,7 @@ A seleção e configuração dos bancos são feitas via `application.properties`
 
 - Java 21+
 - Maven 3.8+
-- Docker (opcional, para MariaDB e MongoDB)
+- Docker (opcional, para MariaDB)
 - VS Code com Extension Pack for Java
 
 ---
@@ -57,9 +54,9 @@ A seleção e configuração dos bancos são feitas via `application.properties`
 ## 📂 Estrutura do Projeto
 
 ```bash
-com.exemplo.tarefas
+com.example.demo
 ├── controller        # Camada Controller
 ├── model             # Entidades (Model)
-├── repository        # Repositórios JPA e Mongo
+├── repository        # Repositório MariaDB
 ├── service           # Lógica de Negócio
 └── application.properties
